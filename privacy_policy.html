@@ -1,136 +1,264 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Privacy Policy - WA Media Finder & Cleaner</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Privacy Policy — FindMyMedia</title>
   <style>
+    :root {
+      --canvas: #f5f7fa;
+      --surface: #ffffff;
+      --text: #202124;
+      --muted: #5f6368;
+      --primary: #1a73e8;
+      --primary-soft: #e8f0fe;
+      --border: #e8eaed;
+    }
+    * { box-sizing: border-box; }
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial;
-      background: #f4f6f8;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--canvas);
       margin: 0;
       padding: 0;
+      color: var(--text);
     }
-
     .container {
       max-width: 800px;
       margin: 40px auto;
-      background: white;
-      padding: 30px;
+      background: var(--surface);
+      padding: 32px 28px;
       border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      border: 1px solid var(--border);
+      box-shadow: 0 4px 20px rgba(32, 33, 36, 0.06);
     }
-
+    .header { text-align: center; margin-bottom: 28px; }
     h1 {
-      color: #075E54;
-      margin-bottom: 5px;
+      color: var(--text);
+      font-size: 1.75rem;
+      margin: 0 0 6px;
+      letter-spacing: -0.02em;
     }
-
-    h2 {
-      color: #128C7E;
-      margin-top: 25px;
+    .app-name {
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 1.1rem;
+      margin: 0;
     }
-
-    p, li {
-      color: #333;
-      line-height: 1.6;
-    }
-
-    ul {
-      padding-left: 20px;
-    }
-
-    .header {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
     .badge {
       display: inline-block;
-      background: #e6f7f5;
-      color: #128C7E;
+      background: var(--primary-soft);
+      color: var(--primary);
       padding: 6px 14px;
-      border-radius: 20px;
+      border-radius: 8px;
       font-size: 12px;
-      margin-top: 10px;
+      font-weight: 500;
+      margin-top: 14px;
     }
-
+    h2 {
+      color: var(--text);
+      font-size: 1.15rem;
+      margin-top: 28px;
+      margin-bottom: 10px;
+    }
+    p, li {
+      color: var(--muted);
+      line-height: 1.65;
+      font-size: 15px;
+    }
+    ul { padding-left: 1.25rem; }
+    a { color: var(--primary); }
+    .meta {
+      font-size: 13px;
+      color: var(--muted);
+      margin-top: 8px;
+    }
     footer {
-      margin-top: 30px;
+      margin-top: 36px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
       font-size: 12px;
-      color: #777;
+      color: var(--muted);
       text-align: center;
+    }
+    @media (max-width: 600px) {
+      .container { margin: 16px; padding: 24px 18px; }
     }
   </style>
 </head>
-
 <body>
+  <main class="container">
+    <header class="header">
+      <h1>Privacy Policy</h1>
+      <p class="app-name">FindMyMedia</p>
+      <p class="meta">Android package: <code>com.opusleaf.findmymedia</code></p>
+      <span class="badge">Effective date: 7 August 2026</span>
+    </header>
 
-<div class="container">
+    <p>
+      Thank you for using <strong>FindMyMedia</strong> (operated by OpusLeaf).
+      This Privacy Policy explains what information the app processes, how it
+      is used, and your choices. FindMyMedia helps you find, browse, search,
+      and clean WhatsApp-related media that is already stored on your device.
+    </p>
 
-  <div class="header">
-    <h1>Privacy Policy</h1>
-    <div class="badge">WA Media Finder & Cleaner</div>
-    <p><strong>Effective Date:</strong> 29 March 2026</p>
-  </div>
+    <h2>1. Summary</h2>
+    <ul>
+      <li>We do <strong>not</strong> require you to create an account.</li>
+      <li>Your media files are processed <strong>on your device</strong>. We do not operate a server that stores your photos, videos, documents, or WhatsApp files.</li>
+      <li>We use <strong>Google AdMob</strong> for ads and <strong>Google Play Billing</strong> for optional Pro purchases.</li>
+      <li>This app is <strong>not</strong> affiliated with WhatsApp or Meta.</li>
+    </ul>
 
-  <p>Thank you for using <strong>WA Media Finder & Cleaner</strong>. Your privacy is important to us. This Privacy Policy explains how our app handles your information.</p>
+    <h2>2. Information we process</h2>
+    <h3 style="font-size:1rem;color:var(--text);margin-bottom:6px;">2.1 On-device media and files</h3>
+    <p>
+      To provide core features (scan, gallery, search, status download, trash),
+      the app reads media and related file metadata available on your device
+      through Android APIs such as the <strong>MediaStore</strong> and, where
+      needed, user-granted <strong>folder access (SAF)</strong>. Processing
+      (indexing, thumbnails, search text extraction, move-to-trash) happens
+      locally. Files are not uploaded to OpusLeaf servers.
+    </p>
 
-  <h2>1. Information We Collect</h2>
-  <p>We do not collect, store, or share any personal data from users.</p>
-  <p>Our app processes files locally on your device to provide functionality such as:</p>
-  <ul>
-    <li>Searching media files (images, videos, documents)</li>
-    <li>Detecting duplicate files</li>
-    <li>Organizing and filtering media</li>
-  </ul>
-  <p>All processing happens on your device only.</p>
+    <h3 style="font-size:1rem;color:var(--text);margin-bottom:6px;">2.2 App preferences stored on device</h3>
+    <p>
+      The app stores small amounts of data locally (for example preferences,
+      free-tier usage counters, Pro entitlement flags, and ad cooldown timers)
+      using on-device storage such as SharedPreferences and a local database.
+      This data stays on your device unless you clear app data or uninstall.
+    </p>
 
-  <h2>2. Permissions We Use</h2>
-  <p>Our app may request the following permissions:</p>
+    <h3 style="font-size:1rem;color:var(--text);margin-bottom:6px;">2.3 Optional feedback you send</h3>
+    <p>
+      If you use <strong>Send feedback</strong>, your email client may open with
+      a message that includes device and troubleshooting details you choose to
+      send (for example app version, Android version, and diagnostic notes).
+      That content is only sent if you send the email.
+    </p>
 
-  <h3>Storage / Media Access</h3>
-  <ul>
-    <li>To scan and display media files stored on your device</li>
-    <li>To help you search, organize, and manage your files</li>
-  </ul>
-  <p>We do not upload, store, or transmit your files to any external servers.</p>
+    <h3 style="font-size:1rem;color:var(--text);margin-bottom:6px;">2.4 Information we do not collect as an account</h3>
+    <p>
+      FindMyMedia does not create OpusLeaf user profiles, and we do not run a
+      backend that stores your media library or purchase history on our servers.
+      Purchase records are handled by Google Play under Google’s terms.
+    </p>
 
-  <h2>3. Data Sharing</h2>
-  <p>We do not share any user data with third parties.</p>
+    <h2>3. Permissions</h2>
+    <p>Depending on your Android version, the app may request:</p>
+    <ul>
+      <li><strong>Photos / videos / audio (media)</strong> — to find and show WhatsApp-related media via MediaStore.</li>
+      <li><strong>Storage (older Android)</strong> — limited legacy storage access where required.</li>
+      <li><strong>Folder access (SAF)</strong> — optional, user-initiated access to folders such as WhatsApp Media for statuses or documents that MediaStore alone cannot fully expose.</li>
+      <li><strong>Notifications</strong> — for scan or background work progress where applicable.</li>
+      <li><strong>Advertising ID</strong> — used in connection with ads (see AdMob below).</li>
+    </ul>
+    <p>
+      FindMyMedia is designed <strong>without</strong> requiring
+      “All files access” (<code>MANAGE_EXTERNAL_STORAGE</code>) for Play releases.
+    </p>
 
-  <h2>4. Data Security</h2>
-  <ul>
-    <li>Your data remains under your control</li>
-    <li>No files are sent outside your device</li>
-  </ul>
+    <h2>4. Ads (Google AdMob)</h2>
+    <p>
+      Free users may see banner, interstitial, and rewarded ads served by
+      <strong>Google AdMob</strong>. AdMob and its partners may collect or
+      receive device and advertising identifiers and usage data related to ad
+      delivery, measurement, and fraud prevention, according to Google’s policies.
+    </p>
+    <ul>
+      <li>AdMob / Google Privacy:
+        <a href="https://policies.google.com/privacy" rel="noopener noreferrer">https://policies.google.com/privacy</a>
+      </li>
+      <li>How Google uses data in ads products:
+        <a href="https://business.safety.google/privacy/" rel="noopener noreferrer">https://business.safety.google/privacy/</a>
+      </li>
+    </ul>
+    <p>
+      Purchasing <strong>Pro</strong> is intended to remove ads while Pro is active,
+      as described in the app.
+    </p>
 
-  <h2>5. Third-Party Services</h2>
-  <p>This app does not use third-party services that collect personal data.</p>
-  <p><em>(If you add ads later, this section must be updated.)</em></p>
+    <h2>5. Purchases (Google Play Billing)</h2>
+    <p>
+      Optional Pro plans (<code>pro_monthly</code>, <code>pro_yearly</code>,
+      <code>pro_lifetime</code>) are sold through <strong>Google Play Billing</strong>.
+      Google processes payment and purchase data. OpusLeaf does not receive your
+      full payment card details. Restore purchases uses Google Play’s purchase
+      state on your device / Google account.
+    </p>
+    <p>
+      Google Play Terms:
+      <a href="https://play.google.com/about/play-terms/" rel="noopener noreferrer">https://play.google.com/about/play-terms/</a>
+    </p>
 
-  <h2>6. Children’s Privacy</h2>
-  <p>We do not knowingly collect data from children under 13.</p>
+    <h2>6. Sharing</h2>
+    <p>
+      We do not sell your personal information. Limited sharing occurs only as
+      needed for:
+    </p>
+    <ul>
+      <li>Google AdMob (advertising on free tier)</li>
+      <li>Google Play (distribution, billing, license testing)</li>
+      <li>Feedback you voluntarily email to us</li>
+      <li>Content you choose to share via the system share sheet (e.g. app link or files you select)</li>
+    </ul>
 
-  <h2>7. Changes to This Policy</h2>
-  <p>We may update this Privacy Policy from time to time. Updates will be reflected on this page.</p>
+    <h2>7. Data retention and security</h2>
+    <ul>
+      <li>Media and local indexes remain on your device under your control.</li>
+      <li>Uninstalling the app or clearing app data removes local app storage.</li>
+      <li>We use industry-standard practices appropriate for an on-device app; no method of storage is 100% secure.</li>
+    </ul>
 
-  <h2>8. Contact Us</h2>
-  <p>If you have any questions, contact us at:</p>
-  <p>📧 <strong>info@opusleaf.com</strong></p>
+    <h2>8. Children’s privacy</h2>
+    <p>
+      FindMyMedia is not directed at children under 13. We do not knowingly
+      collect personal information from children under 13. If you believe a
+      child has provided personal information to us via feedback email, contact
+      us and we will delete it where applicable.
+    </p>
 
-  <h2>9. Disclaimer</h2>
-  <p>This app is not affiliated with, endorsed by, or sponsored by WhatsApp or Meta.</p>
+    <h2>9. Your choices</h2>
+    <ul>
+      <li>Deny or revoke media / folder permissions in Android settings (some features will stop working).</li>
+      <li>Reset advertising ID or limit ad tracking in device settings (where available).</li>
+      <li>Upgrade to Pro to remove ads while entitled.</li>
+      <li>Clear app data or uninstall to remove local app data.</li>
+    </ul>
 
-  <h2>10. Consent</h2>
-  <p>By using our app, you agree to this Privacy Policy.</p>
+    <h2>10. International users</h2>
+    <p>
+      The app is designed primarily for on-device processing. Third parties such
+      as Google may process data in other countries subject to their policies
+      and applicable law.
+    </p>
 
-  <footer>
-    © 2026 WA Media Finder & Cleaner
-  </footer>
+    <h2>11. Changes to this policy</h2>
+    <p>
+      We may update this Privacy Policy from time to time. The effective date
+      above will change when we do. Continued use of the app after updates
+      means you accept the revised policy.
+    </p>
 
-</div>
+    <h2>12. Contact</h2>
+    <p>
+      Questions about this Privacy Policy:<br />
+      <a href="mailto:info@opusleaf.com">info@opusleaf.com</a>
+    </p>
 
+    <h2>13. Disclaimer</h2>
+    <p>
+      FindMyMedia is an independent product. It is <strong>not affiliated with,
+      endorsed by, or sponsored by WhatsApp Inc. or Meta Platforms, Inc.</strong>
+      “WhatsApp” is used only to describe the type of media the app helps you
+      manage on your own device.
+    </p>
+
+    <h2>14. Consent</h2>
+    <p>By using FindMyMedia, you agree to this Privacy Policy.</p>
+
+    <footer>
+      © 2026 OpusLeaf · FindMyMedia · <code>com.opusleaf.findmymedia</code>
+    </footer>
+  </main>
 </body>
 </html>
